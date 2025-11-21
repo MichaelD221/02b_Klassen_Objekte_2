@@ -12,7 +12,7 @@ public class Cat {
         this.furColor = furColor;
         this.age = age;
     }
-
+// getter
     public String getFirstName() {
         return firstName;
     }
