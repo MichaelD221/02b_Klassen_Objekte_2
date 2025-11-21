@@ -4,31 +4,27 @@ public class App {
     
     public static void main(String[] args) {
 
-        Cat cat = new Cat();
+        // Instanziierung + Wertzuweisung
+        Cat cat = new Cat("Grizabella", "white", 29);
         output("Blick von aussen: " + cat);
         output("Blick von innen: " + cat.getInstanceVariable());
 
-        cat.firstName = "Grizabella";
-        cat.furColor = "white";
-        cat.age = 29;
+        output(cat.getFirstName());
+        output(cat.getFurColor());
+        output(Integer.toString(cat.getAge())); // Explizite Typumwandlung!
 
-        output(cat.firstName);
+        cat.furColor = "grey";
         output(cat.furColor);
-        output(Integer.toString(cat.age)); // Explizite Typumwandlung!
 
         output("-----------------------");
 
-        Cat cat2 = new Cat();
+        Cat cat2 = new Cat("Alonzo", "grey", 35);
         output("Blick von aussen: " + cat2);
         output("Blick von innen: " + cat2.getInstanceVariable());
 
-        cat.firstName = "Alonzo";
-        cat.furColor = "grey";
-        cat.age = 35;
-
-        output(cat2.firstName);
-        output(cat2.furColor);
-        output(Integer.toString(cat2.age)); // Explizite Typumwandlung!
+        output(cat2.getFirstName());
+        output(cat2.getFurColor);
+        output(Integer.toString(cat2.getAge())); // Explizite Typumwandlung!
     }
 
   
