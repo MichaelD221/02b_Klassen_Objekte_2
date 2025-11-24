@@ -7,6 +7,7 @@ public class Cat {
     private String furColor;
     private int age; // kleingeschriebene Datentypen haben keine Klassen / Primitives
 
+
     // KONSTRUKTOR //
 
     public Cat(String firstName, String furColor, int age) {
