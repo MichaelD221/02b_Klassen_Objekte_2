@@ -2,20 +2,37 @@ package com.cc.java;
 
 public class Cat {
 
-    // Eigenschaften / Felder / Attribute
+    // Eigenschaften / Felder / Attribute //
     private String firstName;
     private String furColor;
     private int age; // kleingeschriebene Datentypen haben keine Klassen / Primitives
+
+    // KONSTRUKTOR //
 
     public Cat(String firstName, String furColor, int age) {
         this.firstName = firstName;
         this.furColor = furColor;
         this.age = age;
     }
-// getter
+
+    // GETTER //
+
     public String getFirstName() {
-        return firstName;
+        if (getPermission()) {
+            return firstName;
+        } else {
+            return "Sorry, no permission!";
+        }
     }
+
+    private boolean getPermission(){
+        // return true;
+        return false;
+    }   
+
+
+
+
 
     public String getFurColor() {
         return furColor;
@@ -23,6 +40,12 @@ public class Cat {
 
     public int getAge() {
         return age;
+    }
+
+    // SETTER //
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     // return der Instanzvariablen / Adresse
